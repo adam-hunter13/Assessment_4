@@ -33,4 +33,17 @@ def sales_reports(log_file):
 sales_reports(log_file)
 
 
-# EXTRA CREDIT
+# EXTRA CREDIT - yeah idk, below is best attempt
+# Write another function that prints out all the melon orders that delivered over 10 melons.
+
+log_file = open("um-server-01.txt")
+
+def sales_reports(log_file):
+    for line in log_file:
+        line = line.rstrip()
+        order_size = int(line[1])
+        if order_size > 10:
+            print(line)
+
+
+sales_reports(log_file)
